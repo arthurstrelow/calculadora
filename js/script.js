@@ -7,6 +7,12 @@ botoes.forEach((i) => {
     i.addEventListener('click', () => {
         switch (valor){
             case '=':
+                if(display.value.includes('/0')){
+                    display.value = 'Indivisivel por 0'
+                    reseta = true
+                    ultimocalculo = ''
+                    return
+                }
                 try{
                     let calculo = eval(display.value)
                     //Não recomendo o uso do "eval()", como o projeto é local e muito simples foi usado
