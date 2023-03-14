@@ -16,11 +16,12 @@ botoes.forEach((i) => {
                 try{
                     let calculo = eval(display.value)
                     //Não recomendo o uso do "eval()", como o projeto é local e muito simples foi usado
-                    //Portanto, para projeto maiores e querer ter uma calculadora, usasse a lib "Math.js"
+                    //Portanto, para projeto maiores, recomendo usar a lib "Math.js"
                     display.value = calculo
                     ultimocalculo = calculo
                 }catch (e){
                     display.value = 'ERR!'
+                    ultimocalculo = ''
                 }
                 reseta = true
                 break
